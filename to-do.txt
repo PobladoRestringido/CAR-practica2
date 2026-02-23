@@ -1,2 +1,2 @@
-- make README.md with instructions on how to run code*
-- Write instructions on how to download dataset in the README.md
+- Write instructions on how to download dataset in the README.md*
+- add a timer to readme.md or sth
