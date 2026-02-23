@@ -1,7 +1,9 @@
 # How to compile and run code
 
-To compile the code, open a terminal, go to the `build` folder and execute the
+To compile the code, open a terminal, go to the `build` folder (make sure it's empty) and execute the
 following:
+
+`cmake ..`
 
 `cmake --build .`
 

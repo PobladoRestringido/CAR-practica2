@@ -1,1 +1,4 @@
 - add a timer to src/main.cpp or sth
+- use TWO separate times (total program time, convolution time)
+- execute benchmarks on lab computers
+- md5sum
