@@ -1,3 +1,2 @@
-- learn how to remove some files from staging so they don't get uploaded*
+- make README.md with instructions on how to run code*
 - Write instructions on how to download dataset in the README.md
-- Improve Image class to make code more readable and easy to understand (?)

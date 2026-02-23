@@ -1,0 +1,1142 @@
+
+
+
+runspec started at Mon Feb 16 13:22:31 2026
+C:\speccpu2000\bin\runspec --reportable --config win32-x86-vc7.cfg -T base int
+Identifying output formats...asc...config...html...pdf...ps...raw...
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = vc7.x87.exe
+Size      = ref
+Machine   = default
+benchmarks= 164.gzip,175.vpr,176.gcc,181.mcf,186.crafty,197.parser,252.eon,253.perlbmk,254.gap,255.vortex,256.bzip2,300.twolf
+outputs   = raw,ASCII
+We will use: 164.gzip, 175.vpr, 176.gcc, 181.mcf, 186.crafty, 197.parser, 252.eon, 253.perlbmk, 254.gap, 255.vortex, 256.bzip2, 300.twolf
+Compiling Binaries
+  Up to date 164.gzip ref base vc7.x87.exe default
+  Up to date 175.vpr ref base vc7.x87.exe default
+  Up to date 176.gcc ref base vc7.x87.exe default
+  Up to date 181.mcf ref base vc7.x87.exe default
+  Up to date 186.crafty ref base vc7.x87.exe default
+  Up to date 197.parser ref base vc7.x87.exe default
+  Up to date 252.eon ref base vc7.x87.exe default
+
+-----------------------------------
+  Building 253.perlbmk ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CINT2000/253.perlbmk/run/00000002/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = C
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+EXTRA_CFLAGS     = -DSPEC_CPU2000_NTOS -DPERLDLL /MT
+F77              = 
+FC               = 
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 
+action           = validate
+backup_config    = 1
+baseexe          = perlbmk
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 253.perlbmk
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = perlbmk_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 005
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = perlbmk
+nc               = 0
+num              = 253
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CINT2000/253.perlbmk
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reltol           = 
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = pablors
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '253.perlbmk' started at:Mon Feb 16 13:22:32 2026 (1771244552)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb 16 13:22:32 2026 (1771244552)
+Stop make command: Mon Feb 16 13:22:32 2026 (1771244552)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  perlbmk perlbmk.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CINT2000\253.perlbmk\run\00000002\make.err
+C:\speccpu2000\benchspec\CINT2000\253.perlbmk\run\00000002\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+The process cannot access the file because it is being used by another process.
+The process cannot access the file because it is being used by another process.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb 16 13:22:32 2026 (1771244552)
+Stop make command: Mon Feb 16 13:22:37 2026 (1771244557)
+Elapsed time for make command: 00:00:05 (5)
+Output from make 'specmake  build > make.out 2> make.err':
+cl -c -Foav.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  av.c
+av.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fobyterun.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  byterun.c
+byterun.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fodeb.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  deb.c
+deb.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fodoio.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  doio.c
+doio.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fodoop.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  doop.c
+doop.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fodump.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  dump.c
+dump.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Foebcdic.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  ebcdic.c
+ebcdic.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fofake_dyna.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  fake_dyna.c
+fake_dyna.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Foglobals.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  globals.c
+globals.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fogv.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  gv.c
+gv.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fohv.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  hv.c
+hv.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fomg.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  mg.c
+mg.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Foop.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  op.c
+op.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Foperl.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  perl.c
+perl.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Foperlio.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  perlio.c
+perlio.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Foperly.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  perly.c
+perly.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fopp.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  pp.c
+pp.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fopp_ctl.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  pp_ctl.c
+pp_ctl.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fopp_hot.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  pp_hot.c
+pp_hot.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fopp_sys.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  pp_sys.c
+pp_sys.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+pp_sys.c(829): warning C4133: 'function': incompatible types - from 'int *' to 'Perl_fd_set *'
+cl -c -Foregcomp.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  regcomp.c
+regcomp.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Foregexec.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  regexec.c
+regexec.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Forun.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  run.c
+run.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Foscope.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  scope.c
+scope.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fosv.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  sv.c
+sv.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fotaint.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  taint.c
+taint.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fotoke.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  toke.c
+toke.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Founiversal.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  universal.c
+universal.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Foutil.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  util.c
+util.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -FoMD5.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  MD5.c
+MD5.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fomd5c.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  md5c.c
+md5c.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Font_perlmain.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  nt_perlmain.c
+nt_perlmain.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Fowin32.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  win32.c
+win32.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+win32.c(2073): warning C4047: 'return': 'char *' differs in levels of indirection from 'int'
+cl -c -Fowin32sck.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  win32sck.c
+win32sck.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl -c -Foperllib.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  perllib.c
+perllib.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h(117): note: see previous definition of 'ENOTSOCK'
+cl       /Ox /GL /Op  av.obj byterun.obj deb.obj doio.obj doop.obj dump.obj ebcdic.obj fake_dyna.obj globals.obj gv.obj hv.obj mg.obj op.obj perl.obj perlio.obj perly.obj pp.obj pp_ctl.obj pp_hot.obj pp_sys.obj regcomp.obj regexec.obj run.obj scope.obj sv.obj taint.obj toke.obj universal.obj util.obj MD5.obj md5c.obj nt_perlmain.obj win32.obj win32sck.obj perllib.obj advapi32.lib wsock32.lib    -Feperlbmk
+Microsoft (R) Incremental Linker Version 14.50.35724.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:perlbmk.exe 
+av.obj 
+byterun.obj 
+deb.obj 
+doio.obj 
+doop.obj 
+dump.obj 
+ebcdic.obj 
+fake_dyna.obj 
+globals.obj 
+gv.obj 
+hv.obj 
+mg.obj 
+op.obj 
+perl.obj 
+perlio.obj 
+perly.obj 
+pp.obj 
+pp_ctl.obj 
+pp_hot.obj 
+pp_sys.obj 
+regcomp.obj 
+regexec.obj 
+run.obj 
+scope.obj 
+sv.obj 
+taint.obj 
+toke.obj 
+universal.obj 
+util.obj 
+MD5.obj 
+md5c.obj 
+nt_perlmain.obj 
+win32.obj 
+win32sck.obj 
+perllib.obj 
+advapi32.lib 
+wsock32.lib 
+win32.obj : error LNK2001: unresolved external symbol __set_osfhnd
+win32.obj : error LNK2001: unresolved external symbol __unlock_fhandle
+perlbmk.exe : fatal error LNK1120: 2 unresolved externals
+Error from make 'specmake  build > make.out 2> make.err':
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+cl : Command line warning D9002 : ignoring unknown option '/Op'
+specmake: *** [perlbmk] Error 2
+Error with make 'specmake  build > make.out 2> make.err': check file 'C:/speccpu2000/benchspec/CINT2000/253.perlbmk/run/00000002/make.err'
+  Error with make!
+  Compile for '253.perlbmk' ended at:Mon Feb 16 13:22:37 2026 (1771244557)
+  Elapsed compile for '253.perlbmk': 00:00:05 (5)
+*** Error building 253.perlbmk
+  Up to date 254.gap ref base vc7.x87.exe default
+  Up to date 255.vortex ref base vc7.x87.exe default
+  Up to date 256.bzip2 ref base vc7.x87.exe default
+  Up to date 300.twolf ref base vc7.x87.exe default
+Setting Up Run Directories
+  Setting up 164.gzip ref base vc7.x87.exe default: created
+  Setting up 175.vpr ref base vc7.x87.exe default: created
+  Setting up 176.gcc ref base vc7.x87.exe default: created
+  Setting up 181.mcf ref base vc7.x87.exe default: created
+  Setting up 186.crafty ref base vc7.x87.exe default: created
+  Setting up 197.parser ref base vc7.x87.exe default: created
+  Setting up 252.eon ref base vc7.x87.exe default: created
+  Setting up 254.gap ref base vc7.x87.exe default: created
+  Setting up 255.vortex ref base vc7.x87.exe default: created
+  Setting up 256.bzip2 ref base vc7.x87.exe default: created
+  Setting up 300.twolf ref base vc7.x87.exe default: created
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 164.gzip ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/164.gzip/run/00000005
+    -o input.source.out -e input.source.err ../00000005/gzip_base.vc7.x87.exe input.source 60
+    -o input.log.out -e input.log.err ../00000005/gzip_base.vc7.x87.exe input.log 60
+    -o input.graphic.out -e input.graphic.err ../00000005/gzip_base.vc7.x87.exe input.graphic 60
+    -o input.random.out -e input.random.err ../00000005/gzip_base.vc7.x87.exe input.random 60
+    -o input.program.out -e input.program.err ../00000005/gzip_base.vc7.x87.exe input.program 60
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/164.gzip/run/00000005 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/164.gzip/run/00000005'
+comparing 'input.graphic.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.log.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.program.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.random.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.source.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/164.gzip/run/00000005 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:22:42 2026 (1771244562)
+  Stop:     Mon Feb 16 13:23:36 2026 (1771244616)
+  Elapsed:  00:00:54 (54)
+  Reported: 54 115000000 54.115
+ Success 164.gzip ratio=2587.08, runtime=54.115000
+  Running 164.gzip ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/164.gzip/run/00000005
+    -o input.source.out -e input.source.err ../00000005/gzip_base.vc7.x87.exe input.source 60
+    -o input.log.out -e input.log.err ../00000005/gzip_base.vc7.x87.exe input.log 60
+    -o input.graphic.out -e input.graphic.err ../00000005/gzip_base.vc7.x87.exe input.graphic 60
+    -o input.random.out -e input.random.err ../00000005/gzip_base.vc7.x87.exe input.random 60
+    -o input.program.out -e input.program.err ../00000005/gzip_base.vc7.x87.exe input.program 60
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/164.gzip/run/00000005 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/164.gzip/run/00000005'
+comparing 'input.graphic.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.log.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.program.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.random.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.source.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/164.gzip/run/00000005 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:23:37 2026 (1771244617)
+  Stop:     Mon Feb 16 13:24:34 2026 (1771244674)
+  Elapsed:  00:00:57 (57)
+  Reported: 57 647000000 57.647
+ Success 164.gzip ratio=2428.57, runtime=57.647000
+  Running 164.gzip ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/164.gzip/run/00000005
+    -o input.source.out -e input.source.err ../00000005/gzip_base.vc7.x87.exe input.source 60
+    -o input.log.out -e input.log.err ../00000005/gzip_base.vc7.x87.exe input.log 60
+    -o input.graphic.out -e input.graphic.err ../00000005/gzip_base.vc7.x87.exe input.graphic 60
+    -o input.random.out -e input.random.err ../00000005/gzip_base.vc7.x87.exe input.random 60
+    -o input.program.out -e input.program.err ../00000005/gzip_base.vc7.x87.exe input.program 60
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/164.gzip/run/00000005 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/164.gzip/run/00000005'
+comparing 'input.graphic.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.log.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.program.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.random.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.source.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/164.gzip/run/00000005 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:24:35 2026 (1771244675)
+  Stop:     Mon Feb 16 13:25:23 2026 (1771244723)
+  Elapsed:  00:00:48 (48)
+  Reported: 48 39000000 48.039
+ Success 164.gzip ratio=2914.30, runtime=48.039000
+
+-----------------------------------
+  Running 175.vpr ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000004
+    -o place_log.out -e place_log.err ../00000004/vpr_base.vc7.x87.exe net.in arch.in place.out dum.out -nodisp -place_only -init_t 5 -exit_t 0.005 -alpha_t 0.9412 -inner_num 2
+    -o route_log.out -e route_log.err ../00000004/vpr_base.vc7.x87.exe net.in arch.in place.in route.out -nodisp -route_only -route_chan_width 15 -pres_fac_mult 2 -acc_fac 1 -first_iter_pres_fac 4 -initial_pres_fac 8
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000004'
+comparing 'costs.out' with cw='', abstol='', reltol='0.05',obiwan='',skiptol=''
+comparing 'place_log.out' with cw='', abstol='', reltol='0.015',obiwan='',skiptol=''
+comparing 'route.out' with cw='', abstol='', reltol='0.015',obiwan='',skiptol=''
+comparing 'route_log.out' with cw='', abstol='', reltol='0.015',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:25:23 2026 (1771244723)
+  Stop:     Mon Feb 16 13:26:03 2026 (1771244763)
+  Elapsed:  00:00:40 (40)
+  Reported: 39 527000000 39.527
+ Success 175.vpr ratio=3541.88, runtime=39.527000
+  Running 175.vpr ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000004
+    -o place_log.out -e place_log.err ../00000004/vpr_base.vc7.x87.exe net.in arch.in place.out dum.out -nodisp -place_only -init_t 5 -exit_t 0.005 -alpha_t 0.9412 -inner_num 2
+    -o route_log.out -e route_log.err ../00000004/vpr_base.vc7.x87.exe net.in arch.in place.in route.out -nodisp -route_only -route_chan_width 15 -pres_fac_mult 2 -acc_fac 1 -first_iter_pres_fac 4 -initial_pres_fac 8
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000004'
+comparing 'costs.out' with cw='', abstol='', reltol='0.05',obiwan='',skiptol=''
+comparing 'place_log.out' with cw='', abstol='', reltol='0.015',obiwan='',skiptol=''
+comparing 'route.out' with cw='', abstol='', reltol='0.015',obiwan='',skiptol=''
+comparing 'route_log.out' with cw='', abstol='', reltol='0.015',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:26:04 2026 (1771244764)
+  Stop:     Mon Feb 16 13:26:43 2026 (1771244803)
+  Elapsed:  00:00:39 (39)
+  Reported: 38 516000000 38.516
+ Success 175.vpr ratio=3634.85, runtime=38.516000
+  Running 175.vpr ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000004
+    -o place_log.out -e place_log.err ../00000004/vpr_base.vc7.x87.exe net.in arch.in place.out dum.out -nodisp -place_only -init_t 5 -exit_t 0.005 -alpha_t 0.9412 -inner_num 2
+    -o route_log.out -e route_log.err ../00000004/vpr_base.vc7.x87.exe net.in arch.in place.in route.out -nodisp -route_only -route_chan_width 15 -pres_fac_mult 2 -acc_fac 1 -first_iter_pres_fac 4 -initial_pres_fac 8
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000004'
+comparing 'costs.out' with cw='', abstol='', reltol='0.05',obiwan='',skiptol=''
+comparing 'place_log.out' with cw='', abstol='', reltol='0.015',obiwan='',skiptol=''
+comparing 'route.out' with cw='', abstol='', reltol='0.015',obiwan='',skiptol=''
+comparing 'route_log.out' with cw='', abstol='', reltol='0.015',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:26:44 2026 (1771244804)
+  Stop:     Mon Feb 16 13:27:21 2026 (1771244841)
+  Elapsed:  00:00:37 (37)
+  Reported: 36 810000000 36.81
+ Success 175.vpr ratio=3803.31, runtime=36.810000
+
+-----------------------------------
+  Running 176.gcc ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000004
+    -o 166.out -e 166.err ../00000004/cc1_base.vc7.x87.exe 166.i -o 166.s
+    -o 200.out -e 200.err ../00000004/cc1_base.vc7.x87.exe 200.i -o 200.s
+    -o expr.out -e expr.err ../00000004/cc1_base.vc7.x87.exe expr.i -o expr.s
+    -o integrate.out -e integrate.err ../00000004/cc1_base.vc7.x87.exe integrate.i -o integrate.s
+    -o scilab.out -e scilab.err ../00000004/cc1_base.vc7.x87.exe scilab.i -o scilab.s
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000004'
+comparing '166.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing '200.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'expr.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'integrate.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'scilab.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:27:22 2026 (1771244842)
+  Stop:     Mon Feb 16 13:27:36 2026 (1771244856)
+  Elapsed:  00:00:14 (14)
+  Reported: 13 897000000 13.897
+ Success 176.gcc ratio=7915.38, runtime=13.897000
+  Running 176.gcc ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000004
+    -o 166.out -e 166.err ../00000004/cc1_base.vc7.x87.exe 166.i -o 166.s
+    -o 200.out -e 200.err ../00000004/cc1_base.vc7.x87.exe 200.i -o 200.s
+    -o expr.out -e expr.err ../00000004/cc1_base.vc7.x87.exe expr.i -o expr.s
+    -o integrate.out -e integrate.err ../00000004/cc1_base.vc7.x87.exe integrate.i -o integrate.s
+    -o scilab.out -e scilab.err ../00000004/cc1_base.vc7.x87.exe scilab.i -o scilab.s
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000004'
+comparing '166.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing '200.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'expr.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'integrate.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'scilab.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:27:39 2026 (1771244859)
+  Stop:     Mon Feb 16 13:27:53 2026 (1771244873)
+  Elapsed:  00:00:14 (14)
+  Reported: 13 726000000 13.726
+ Success 176.gcc ratio=8013.99, runtime=13.726000
+  Running 176.gcc ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000004
+    -o 166.out -e 166.err ../00000004/cc1_base.vc7.x87.exe 166.i -o 166.s
+    -o 200.out -e 200.err ../00000004/cc1_base.vc7.x87.exe 200.i -o 200.s
+    -o expr.out -e expr.err ../00000004/cc1_base.vc7.x87.exe expr.i -o expr.s
+    -o integrate.out -e integrate.err ../00000004/cc1_base.vc7.x87.exe integrate.i -o integrate.s
+    -o scilab.out -e scilab.err ../00000004/cc1_base.vc7.x87.exe scilab.i -o scilab.s
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000004'
+comparing '166.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing '200.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'expr.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'integrate.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'scilab.s' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:27:56 2026 (1771244876)
+  Stop:     Mon Feb 16 13:28:09 2026 (1771244889)
+  Elapsed:  00:00:13 (13)
+  Reported: 13 669000000 13.669
+ Success 176.gcc ratio=8047.41, runtime=13.669000
+
+-----------------------------------
+  Running 181.mcf ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000004
+    -o inp.out -e inp.err ../00000004/mcf_base.vc7.x87.exe inp.in
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000004'
+comparing 'inp.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'mcf.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:28:12 2026 (1771244892)
+  Stop:     Mon Feb 16 13:28:28 2026 (1771244908)
+  Elapsed:  00:00:16 (16)
+  Reported: 16 29000000 16.029
+ Success 181.mcf ratio=11229.65, runtime=16.029000
+  Running 181.mcf ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000004
+    -o inp.out -e inp.err ../00000004/mcf_base.vc7.x87.exe inp.in
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000004'
+comparing 'inp.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'mcf.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:28:28 2026 (1771244908)
+  Stop:     Mon Feb 16 13:28:44 2026 (1771244924)
+  Elapsed:  00:00:16 (16)
+  Reported: 16 21000000 16.021
+ Success 181.mcf ratio=11235.25, runtime=16.021000
+  Running 181.mcf ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000004
+    -o inp.out -e inp.err ../00000004/mcf_base.vc7.x87.exe inp.in
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000004'
+comparing 'inp.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'mcf.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:28:45 2026 (1771244925)
+  Stop:     Mon Feb 16 13:29:00 2026 (1771244940)
+  Elapsed:  00:00:15 (15)
+  Reported: 15 920000000 15.92
+ Success 181.mcf ratio=11306.53, runtime=15.920000
+
+-----------------------------------
+  Running 186.crafty ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/186.crafty/run/00000004
+    -i crafty.in -o crafty.out -e crafty.err ../00000004/crafty_base.vc7.x87.exe
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/186.crafty/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/186.crafty/run/00000004'
+comparing 'crafty.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/186.crafty/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:29:01 2026 (1771244941)
+  Stop:     Mon Feb 16 13:29:16 2026 (1771244956)
+  Elapsed:  00:00:15 (15)
+  Reported: 15 598000000 15.598
+ Success 186.crafty ratio=6411.08, runtime=15.598000
+  Running 186.crafty ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/186.crafty/run/00000004
+    -i crafty.in -o crafty.out -e crafty.err ../00000004/crafty_base.vc7.x87.exe
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/186.crafty/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/186.crafty/run/00000004'
+comparing 'crafty.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/186.crafty/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:29:16 2026 (1771244956)
+  Stop:     Mon Feb 16 13:29:33 2026 (1771244973)
+  Elapsed:  00:00:17 (17)
+  Reported: 16 414000000 16.414
+ Success 186.crafty ratio=6092.36, runtime=16.414000
+  Running 186.crafty ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/186.crafty/run/00000004
+    -i crafty.in -o crafty.out -e crafty.err ../00000004/crafty_base.vc7.x87.exe
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/186.crafty/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/186.crafty/run/00000004'
+comparing 'crafty.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/186.crafty/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:29:33 2026 (1771244973)
+  Stop:     Mon Feb 16 13:29:49 2026 (1771244989)
+  Elapsed:  00:00:16 (16)
+  Reported: 15 922000000 15.922
+ Success 186.crafty ratio=6280.62, runtime=15.922000
+
+-----------------------------------
+  Running 197.parser ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/197.parser/run/00000004
+    -i ref.in -o ref.out -e ref.err ../00000004/parser_base.vc7.x87.exe 2.1.dict -batch
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/197.parser/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/197.parser/run/00000004'
+comparing 'ref.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/197.parser/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:29:49 2026 (1771244989)
+  Stop:     Mon Feb 16 13:30:29 2026 (1771245029)
+  Elapsed:  00:00:40 (40)
+  Reported: 40 113000000 40.113
+ Success 197.parser ratio=4487.32, runtime=40.113000
+  Running 197.parser ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/197.parser/run/00000004
+    -i ref.in -o ref.out -e ref.err ../00000004/parser_base.vc7.x87.exe 2.1.dict -batch
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/197.parser/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/197.parser/run/00000004'
+comparing 'ref.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/197.parser/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:30:29 2026 (1771245029)
+  Stop:     Mon Feb 16 13:31:14 2026 (1771245074)
+  Elapsed:  00:00:45 (45)
+  Reported: 44 987000000 44.987
+ Success 197.parser ratio=4001.16, runtime=44.987000
+  Running 197.parser ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/197.parser/run/00000004
+    -i ref.in -o ref.out -e ref.err ../00000004/parser_base.vc7.x87.exe 2.1.dict -batch
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/197.parser/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/197.parser/run/00000004'
+comparing 'ref.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/197.parser/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:31:14 2026 (1771245074)
+  Stop:     Mon Feb 16 13:31:56 2026 (1771245116)
+  Elapsed:  00:00:42 (42)
+  Reported: 41 435000000 41.435
+ Success 197.parser ratio=4344.15, runtime=41.435000
+
+-----------------------------------
+  Running 252.eon ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/252.eon/run/00000004
+    -o cook_log.out -e cook_log.err ../00000004/eon_base.vc7.x87.exe chair.control.cook chair.camera chair.surfaces chair.cook.ppm ppm pixels_out.cook
+    -o rushmeier_log.out -e rushmeier_log.err ../00000004/eon_base.vc7.x87.exe chair.control.rushmeier chair.camera chair.surfaces chair.rushmeier.ppm ppm pixels_out.rushmeier
+    -o kajiya_log.out -e kajiya_log.err ../00000004/eon_base.vc7.x87.exe chair.control.kajiya chair.camera chair.surfaces chair.kajiya.ppm ppm pixels_out.kajiya
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/252.eon/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/252.eon/run/00000004'
+comparing 'pixels_out.cook' with cw='', abstol='0.005', reltol='',obiwan='',skiptol=''
+comparing 'pixels_out.kajiya' with cw='', abstol='0.005', reltol='',obiwan='',skiptol=''
+comparing 'pixels_out.rushmeier' with cw='', abstol='0.005', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/252.eon/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:31:56 2026 (1771245116)
+  Stop:     Mon Feb 16 13:32:16 2026 (1771245136)
+  Elapsed:  00:00:20 (20)
+  Reported: 19 915000000 19.915
+ Success 252.eon ratio=6527.74, runtime=19.915000
+  Running 252.eon ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/252.eon/run/00000004
+    -o cook_log.out -e cook_log.err ../00000004/eon_base.vc7.x87.exe chair.control.cook chair.camera chair.surfaces chair.cook.ppm ppm pixels_out.cook
+    -o rushmeier_log.out -e rushmeier_log.err ../00000004/eon_base.vc7.x87.exe chair.control.rushmeier chair.camera chair.surfaces chair.rushmeier.ppm ppm pixels_out.rushmeier
+    -o kajiya_log.out -e kajiya_log.err ../00000004/eon_base.vc7.x87.exe chair.control.kajiya chair.camera chair.surfaces chair.kajiya.ppm ppm pixels_out.kajiya
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/252.eon/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/252.eon/run/00000004'
+comparing 'pixels_out.cook' with cw='', abstol='0.005', reltol='',obiwan='',skiptol=''
+comparing 'pixels_out.kajiya' with cw='', abstol='0.005', reltol='',obiwan='',skiptol=''
+comparing 'pixels_out.rushmeier' with cw='', abstol='0.005', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/252.eon/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:32:16 2026 (1771245136)
+  Stop:     Mon Feb 16 13:32:36 2026 (1771245156)
+  Elapsed:  00:00:20 (20)
+  Reported: 19 617000000 19.617
+ Success 252.eon ratio=6626.91, runtime=19.617000
+  Running 252.eon ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/252.eon/run/00000004
+    -o cook_log.out -e cook_log.err ../00000004/eon_base.vc7.x87.exe chair.control.cook chair.camera chair.surfaces chair.cook.ppm ppm pixels_out.cook
+    -o rushmeier_log.out -e rushmeier_log.err ../00000004/eon_base.vc7.x87.exe chair.control.rushmeier chair.camera chair.surfaces chair.rushmeier.ppm ppm pixels_out.rushmeier
+    -o kajiya_log.out -e kajiya_log.err ../00000004/eon_base.vc7.x87.exe chair.control.kajiya chair.camera chair.surfaces chair.kajiya.ppm ppm pixels_out.kajiya
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/252.eon/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/252.eon/run/00000004'
+comparing 'pixels_out.cook' with cw='', abstol='0.005', reltol='',obiwan='',skiptol=''
+comparing 'pixels_out.kajiya' with cw='', abstol='0.005', reltol='',obiwan='',skiptol=''
+comparing 'pixels_out.rushmeier' with cw='', abstol='0.005', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/252.eon/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:32:36 2026 (1771245156)
+  Stop:     Mon Feb 16 13:32:55 2026 (1771245175)
+  Elapsed:  00:00:19 (19)
+  Reported: 18 409000000 18.409
+ Success 252.eon ratio=7061.76, runtime=18.409000
+
+-----------------------------------
+
+-----------------------------------
+  Running 254.gap ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/254.gap/run/00000004
+    -i ref.in -o ref.out -e ref.err ../00000004/gap_base.vc7.x87.exe -l ./ -q -m 192M
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/254.gap/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/254.gap/run/00000004'
+comparing 'ref.out' with cw='', abstol='', reltol='0.01',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/254.gap/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:32:55 2026 (1771245175)
+  Stop:     Mon Feb 16 13:33:11 2026 (1771245191)
+  Elapsed:  00:00:16 (16)
+  Reported: 16 413000000 16.413
+ Success 254.gap ratio=6702.00, runtime=16.413000
+  Running 254.gap ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/254.gap/run/00000004
+    -i ref.in -o ref.out -e ref.err ../00000004/gap_base.vc7.x87.exe -l ./ -q -m 192M
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/254.gap/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/254.gap/run/00000004'
+comparing 'ref.out' with cw='', abstol='', reltol='0.01',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/254.gap/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:33:12 2026 (1771245192)
+  Stop:     Mon Feb 16 13:33:28 2026 (1771245208)
+  Elapsed:  00:00:16 (16)
+  Reported: 16 153000000 16.153
+ Success 254.gap ratio=6809.88, runtime=16.153000
+  Running 254.gap ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/254.gap/run/00000004
+    -i ref.in -o ref.out -e ref.err ../00000004/gap_base.vc7.x87.exe -l ./ -q -m 192M
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/254.gap/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/254.gap/run/00000004'
+comparing 'ref.out' with cw='', abstol='', reltol='0.01',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/254.gap/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:33:28 2026 (1771245208)
+  Stop:     Mon Feb 16 13:33:44 2026 (1771245224)
+  Elapsed:  00:00:16 (16)
+  Reported: 15 730000000 15.73
+ Success 254.gap ratio=6993.01, runtime=15.730000
+
+-----------------------------------
+  Running 255.vortex ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/255.vortex/run/00000004
+    -o vortex1.out2 -e vortex1.err ../00000004/vortex_base.vc7.x87.exe lendian1.raw
+    -o vortex2.out2 -e vortex2.err ../00000004/vortex_base.vc7.x87.exe lendian2.raw
+    -o vortex3.out2 -e vortex3.err ../00000004/vortex_base.vc7.x87.exe lendian3.raw
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/255.vortex/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/255.vortex/run/00000004'
+comparing 'vortex1.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'vortex2.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'vortex3.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/255.vortex/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:33:44 2026 (1771245224)
+  Stop:     Mon Feb 16 13:34:08 2026 (1771245248)
+  Elapsed:  00:00:24 (24)
+  Reported: 24 409000000 24.409
+ Success 255.vortex ratio=7784.01, runtime=24.409000
+  Running 255.vortex ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/255.vortex/run/00000004
+    -o vortex1.out2 -e vortex1.err ../00000004/vortex_base.vc7.x87.exe lendian1.raw
+    -o vortex2.out2 -e vortex2.err ../00000004/vortex_base.vc7.x87.exe lendian2.raw
+    -o vortex3.out2 -e vortex3.err ../00000004/vortex_base.vc7.x87.exe lendian3.raw
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/255.vortex/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/255.vortex/run/00000004'
+comparing 'vortex1.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'vortex2.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'vortex3.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/255.vortex/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:34:08 2026 (1771245248)
+  Stop:     Mon Feb 16 13:34:34 2026 (1771245274)
+  Elapsed:  00:00:26 (26)
+  Reported: 25 144000000 25.144
+ Success 255.vortex ratio=7556.47, runtime=25.144000
+  Running 255.vortex ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/255.vortex/run/00000004
+    -o vortex1.out2 -e vortex1.err ../00000004/vortex_base.vc7.x87.exe lendian1.raw
+    -o vortex2.out2 -e vortex2.err ../00000004/vortex_base.vc7.x87.exe lendian2.raw
+    -o vortex3.out2 -e vortex3.err ../00000004/vortex_base.vc7.x87.exe lendian3.raw
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/255.vortex/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/255.vortex/run/00000004'
+comparing 'vortex1.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'vortex2.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'vortex3.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/255.vortex/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:34:34 2026 (1771245274)
+  Stop:     Mon Feb 16 13:34:59 2026 (1771245299)
+  Elapsed:  00:00:25 (25)
+  Reported: 24 664000000 24.664
+ Success 255.vortex ratio=7703.54, runtime=24.664000
+
+-----------------------------------
+  Running 256.bzip2 ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/256.bzip2/run/00000004
+    -o input.source.out -e input.source.err ../00000004/bzip2_base.vc7.x87.exe input.source 58
+    -o input.graphic.out -e input.graphic.err ../00000004/bzip2_base.vc7.x87.exe input.graphic 58
+    -o input.program.out -e input.program.err ../00000004/bzip2_base.vc7.x87.exe input.program 58
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/256.bzip2/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/256.bzip2/run/00000004'
+comparing 'input.graphic.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.program.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.source.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/256.bzip2/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:34:59 2026 (1771245299)
+  Stop:     Mon Feb 16 13:35:34 2026 (1771245334)
+  Elapsed:  00:00:35 (35)
+  Reported: 34 676000000 34.676
+ Success 256.bzip2 ratio=4325.76, runtime=34.676000
+  Running 256.bzip2 ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/256.bzip2/run/00000004
+    -o input.source.out -e input.source.err ../00000004/bzip2_base.vc7.x87.exe input.source 58
+    -o input.graphic.out -e input.graphic.err ../00000004/bzip2_base.vc7.x87.exe input.graphic 58
+    -o input.program.out -e input.program.err ../00000004/bzip2_base.vc7.x87.exe input.program 58
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/256.bzip2/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/256.bzip2/run/00000004'
+comparing 'input.graphic.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.program.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.source.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/256.bzip2/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:35:34 2026 (1771245334)
+  Stop:     Mon Feb 16 13:36:11 2026 (1771245371)
+  Elapsed:  00:00:37 (37)
+  Reported: 37 182000000 37.182
+ Success 256.bzip2 ratio=4034.21, runtime=37.182000
+  Running 256.bzip2 ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/256.bzip2/run/00000004
+    -o input.source.out -e input.source.err ../00000004/bzip2_base.vc7.x87.exe input.source 58
+    -o input.graphic.out -e input.graphic.err ../00000004/bzip2_base.vc7.x87.exe input.graphic 58
+    -o input.program.out -e input.program.err ../00000004/bzip2_base.vc7.x87.exe input.program 58
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/256.bzip2/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/256.bzip2/run/00000004'
+comparing 'input.graphic.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.program.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+comparing 'input.source.out' with cw='', abstol='', reltol='',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/256.bzip2/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:36:11 2026 (1771245371)
+  Stop:     Mon Feb 16 13:36:47 2026 (1771245407)
+  Elapsed:  00:00:36 (36)
+  Reported: 35 676000000 35.676
+ Success 256.bzip2 ratio=4204.51, runtime=35.676000
+
+-----------------------------------
+  Running 300.twolf ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/300.twolf/run/00000004
+    -o ref.stdout -e ref.err ../00000004/twolf_base.vc7.x87.exe ref
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/300.twolf/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/300.twolf/run/00000004'
+comparing 'ref.out' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.pin' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.pl1' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.pl2' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.sav' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.stdout' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.sv2' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.twf' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/300.twolf/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:36:47 2026 (1771245407)
+  Stop:     Mon Feb 16 13:37:37 2026 (1771245457)
+  Elapsed:  00:00:50 (50)
+  Reported: 49 633000000 49.633
+ Success 300.twolf ratio=6044.37, runtime=49.633000
+  Running 300.twolf ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/300.twolf/run/00000004
+    -o ref.stdout -e ref.err ../00000004/twolf_base.vc7.x87.exe ref
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/300.twolf/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/300.twolf/run/00000004'
+comparing 'ref.out' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.pin' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.pl1' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.pl2' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.sav' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.stdout' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.sv2' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.twf' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/300.twolf/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:37:38 2026 (1771245458)
+  Stop:     Mon Feb 16 13:38:29 2026 (1771245509)
+  Elapsed:  00:00:51 (51)
+  Reported: 50 719000000 50.719
+ Success 300.twolf ratio=5914.94, runtime=50.719000
+  Running 300.twolf ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CINT2000/300.twolf/run/00000004
+    -o ref.stdout -e ref.err ../00000004/twolf_base.vc7.x87.exe ref
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CINT2000/300.twolf/run/00000004 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CINT2000/300.twolf/run/00000004'
+comparing 'ref.out' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.pin' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.pl1' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.pl2' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.sav' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.stdout' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.sv2' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+comparing 'ref.twf' with cw='', abstol='', reltol='',obiwan='1',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CINT2000/300.twolf/run/00000004 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb 16 13:38:29 2026 (1771245509)
+  Stop:     Mon Feb 16 13:39:23 2026 (1771245563)
+  Elapsed:  00:00:54 (54)
+  Reported: 53 329000000 53.329
+ Success 300.twolf ratio=5625.46, runtime=53.329000
+Error: 1x253.perlbmk
+Success: 3x164.gzip 3x175.vpr 3x176.gcc 3x181.mcf 3x186.crafty 3x197.parser 3x252.eon 3x254.gap 3x255.vortex 3x256.bzip2 3x300.twolf
+Producing Reports
+mach: default
+  ext: vc7.x87.exe
+    size: ref
+      set: int
+        format: raw -> C:/speccpu2000/result/CINT2000.005.raw
+        format: ASCII -> C:/speccpu2000/result/CINT2000.005.asc
+      set: fp
+runspec finished
