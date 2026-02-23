@@ -1,1 +1,0 @@
-/usr/bin/c++ "CMakeFiles/CAR-practica2.dir/src/convolution.cpp.o" "CMakeFiles/CAR-practica2.dir/src/image.cpp.o" "CMakeFiles/CAR-practica2.dir/src/main.cpp.o" -o CAR-practica2 

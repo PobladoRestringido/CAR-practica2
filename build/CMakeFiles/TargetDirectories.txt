@@ -1,3 +1,0 @@
-/home/pablors/uni/high-performance-computing/pr2/build/CMakeFiles/CAR-practica2.dir
-/home/pablors/uni/high-performance-computing/pr2/build/CMakeFiles/edit_cache.dir
-/home/pablors/uni/high-performance-computing/pr2/build/CMakeFiles/rebuild_cache.dir
