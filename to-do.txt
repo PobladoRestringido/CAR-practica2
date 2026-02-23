@@ -1,2 +1,1 @@
-- Write instructions on how to download dataset in the README.md*
-- add a timer to readme.md or sth
+- add a timer to src/main.cpp or sth
