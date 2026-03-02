@@ -4,6 +4,8 @@
 #include <filesystem>
 #include <CAR-practica2/image.hpp>
 #include <CAR-practica2/convolution.hpp>
+#include <chrono>
+
 namespace fs = std::filesystem;
 
 std::vector<std::string> obtener_rutas_imagenes(const std::string &carpeta)
@@ -28,6 +30,8 @@ std::vector<std::string> obtener_rutas_imagenes(const std::string &carpeta)
 
 int main()
 {
+    using clock = std::chrono::high_resolution_clock;
+    auto start = clock::now();
     int MAX_N_IMAGES = 10;
 
     fs::create_directories("output/");
@@ -62,6 +66,11 @@ int main()
             std::cerr << "Error: " << e.what() << "\n";
         }
     }
+
+    auto end = clock::now();
+    std::chrono::duration<double> elapsed = end - start;
+
+    std::cout << "Total execution time: " << elapsed.count() << " seconds\n";
 
     return 0;
 }
