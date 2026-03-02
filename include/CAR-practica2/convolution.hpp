@@ -35,4 +35,6 @@ public:
      * @return A new Image containing the filtered result.
      */
     static Image apply(const Image &img, const ConvolutionKernel &kernel);
+
+    Image apply_simd(const Image &img, const ConvolutionKernel &kernel);
 };

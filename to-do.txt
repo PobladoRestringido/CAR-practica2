@@ -1,4 +1,9 @@
+- get parallelized version to run without segfaulting*
+- fix messy class code and make cleaner
 - add a timer to src/main.cpp or sth
 - use TWO separate times (total program time, convolution time)
 - execute benchmarks on lab computers
 - md5sum
+-O0 and -O3
+
+correo profe: ruben.crespo@ua.es

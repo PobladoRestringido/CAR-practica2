@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/pablors/uni/high-performance-computing/pr2/include
 
-CXX_FLAGS = -std=gnu++20
+CXX_FLAGS = -g -std=gnu++20 -msse4.1 -fsanitize=address -fsanitize=undefined -fno-omit-frame-pointer -g
 
