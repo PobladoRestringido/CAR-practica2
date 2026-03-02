@@ -1,6 +1,7 @@
 #include <CAR-practica2/convolution.hpp>
 #include <immintrin.h>
 #include <iostream>
+#include <chrono>
 
 ConvolutionKernel::ConvolutionKernel(
     std::initializer_list<std::initializer_list<float>> init)
@@ -42,20 +43,21 @@ void do_scalar_pixel(int x, int y, const Image &img, Image &out, const Convoluti
     }
 }
 
-Image Convolver::do_convolve(const Image &img,
-                             const ConvolutionKernel &kernel,
-                             bool use_simd)
+ConvolutionResult Convolver::do_convolve(const Image &img,
+                                         const ConvolutionKernel &kernel,
+                                         bool use_simd)
 {
-    // If SIMD is requested, use the vectorized implementation.
-    // Otherwise, fall back to the scalar version.
-    if (use_simd)
-    {
-        return apply_simd(img, kernel);
-    }
-    else
-    {
-        return apply_linear(img, kernel);
-    }
+    using clock = std::chrono::high_resolution_clock;
+    auto start = clock::now();
+
+    Image result = use_simd
+                       ? apply_simd(img, kernel)
+                       : apply_linear(img, kernel);
+
+    auto end = clock::now();
+    std::chrono::duration<double> elapsed = end - start;
+
+    return ConvolutionResult{std::move(result), elapsed.count()};
 }
 
 Image Convolver::apply_linear(const Image &img, const ConvolutionKernel &kernel)

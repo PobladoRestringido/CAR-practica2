@@ -25,6 +25,13 @@ public:
  * Provides static functions for performing 2D convolution on all channels
  * of an Image using a given 3×3 kernel.
  */
+
+struct ConvolutionResult
+{
+    Image output;
+    double elapsed_seconds;
+};
+
 class Convolver
 {
 public:
@@ -56,7 +63,7 @@ public:
      *       layout are compatible with the vectorized code. If in doubt, or when
      *       debugging, set `use_simd = false` to force the scalar path.
      */
-    Image do_convolve(const Image &img,
-                      const ConvolutionKernel &kernel,
-                      bool use_simd);
+    ConvolutionResult do_convolve(const Image &img,
+                                  const ConvolutionKernel &kernel,
+                                  bool use_simd);
 };

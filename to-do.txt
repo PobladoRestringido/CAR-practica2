@@ -1,6 +1,4 @@
-- add a timer to src/main.cpp or sth*
-    - add general global timer to main*
-    - add another timer to convolver class
+- modify timer to exclude linear convolving at end of it
 - add a hash to make sure all picture outputs are equal
 - fix messy class code and make cleaner
 - use TWO separate times (total program time, convolution time)

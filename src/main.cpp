@@ -32,7 +32,8 @@ int main()
 {
     using clock = std::chrono::high_resolution_clock;
     auto start = clock::now();
-    int MAX_N_IMAGES = 10;
+    int MAX_N_IMAGES = 50;
+    double elapsed_convolution_time = 0;
 
     fs::create_directories("output/");
 
@@ -54,10 +55,11 @@ int main()
         {
             Image img = Image::load(path);
             Convolver convolver;
-            Image filtered = convolver.do_convolve(img, edge_kernel, 1);
+            ConvolutionResult res = convolver.do_convolve(img, edge_kernel, 1);
+            elapsed_convolution_time += res.elapsed_seconds;
 
             std::string filename = path.substr(path.find_last_of("/\\") + 1);
-            filtered.save_jpg("output/" + filename);
+            res.output.save_jpg("output/" + filename);
 
             std::cout << "Processed: " << filename << "\n";
         }
@@ -71,6 +73,7 @@ int main()
     std::chrono::duration<double> elapsed = end - start;
 
     std::cout << "Total execution time: " << elapsed.count() << " seconds\n";
+    std::cout << "Total convolution time: " << elapsed_convolution_time << " seconds\n";
 
     return 0;
 }
