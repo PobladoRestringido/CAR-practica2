@@ -39,10 +39,10 @@ int main(int argc, char **argv)
 
     if (argc > 1)
     {
-        std::string flag = argv[1];
-        if (flag == "0" || flag == "--nosimd")
+        std::string simd_flag = argv[1];
+        if (simd_flag == "0" || simd_flag == "--nosimd")
             use_simd = false;
-        else if (flag == "1" || flag == "--simd")
+        else if (simd_flag == "1" || simd_flag == "--simd")
             use_simd = true;
     }
 

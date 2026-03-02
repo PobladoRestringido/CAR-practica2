@@ -1,9 +1,11 @@
 # How to compile and run code
 
+First go into `build` and run `cmake ..`.
+
 To compile the code, open a terminal (make sure you're on the project's root) and execute the
 following:
 
-`./compiled_and_run.sh`
+`./compile_and_run.sh`
 
 ## Flags
 

@@ -1,5 +1,4 @@
-- create documentation specifying how to run tests*
-- make it take parameter to specify number of images
+- make it take parameter to specify number of images*
 - add a hash to make sure all picture outputs are equal
 - fix messy class code and make cleaner
 - use TWO separate times (total program time, convolution time)
