@@ -1,5 +1,6 @@
+#!/bin/bash
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Debug
 cmake --build .
 cd ..
-./build/CAR-practica2
+./build/CAR-practica2 "$@"

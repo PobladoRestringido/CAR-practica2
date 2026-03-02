@@ -28,12 +28,23 @@ std::vector<std::string> obtener_rutas_imagenes(const std::string &carpeta)
     return archivos;
 }
 
-int main()
+int main(int argc, char **argv)
 {
     using clock = std::chrono::high_resolution_clock;
     auto start = clock::now();
     int MAX_N_IMAGES = 50;
     double elapsed_convolution_time = 0;
+
+    bool use_simd = true; // default
+
+    if (argc > 1)
+    {
+        std::string flag = argv[1];
+        if (flag == "0" || flag == "--nosimd")
+            use_simd = false;
+        else if (flag == "1" || flag == "--simd")
+            use_simd = true;
+    }
 
     fs::create_directories("output/");
 
@@ -55,7 +66,7 @@ int main()
         {
             Image img = Image::load(path);
             Convolver convolver;
-            ConvolutionResult res = convolver.do_convolve(img, edge_kernel, 1);
+            ConvolutionResult res = convolver.do_convolve(img, edge_kernel, use_simd);
             elapsed_convolution_time += res.elapsed_seconds;
 
             std::string filename = path.substr(path.find_last_of("/\\") + 1);
