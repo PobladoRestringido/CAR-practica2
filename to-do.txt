@@ -1,6 +1,7 @@
-- add unifying third method*
-    - make sure it works in main*
-- add a timer to src/main.cpp or sth
+- add a timer to src/main.cpp or sth*
+    - create way to limit number of pictures*
+    - add general global timer to main
+- add a hash to make sure all picture outputs are equal
 - fix messy class code and make cleaner
 - use TWO separate times (total program time, convolution time)
 - execute benchmarks on lab computers

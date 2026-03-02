@@ -8,6 +8,7 @@ namespace fs = std::filesystem;
 
 std::vector<std::string> obtener_rutas_imagenes(const std::string &carpeta)
 {
+
     std::vector<std::string> archivos;
 
     for (const auto &entry : fs::directory_iterator(carpeta))
@@ -27,10 +28,16 @@ std::vector<std::string> obtener_rutas_imagenes(const std::string &carpeta)
 
 int main()
 {
+    int MAX_N_IMAGES = 10;
 
     fs::create_directories("output/");
 
     std::vector<std::string> paths = obtener_rutas_imagenes("./LostCat-PS/LostCat-PS/pet/");
+
+    if (paths.size() > MAX_N_IMAGES)
+    {
+        paths.resize(MAX_N_IMAGES);
+    }
 
     ConvolutionKernel edge_kernel = {
         {-1, -1, -1},
