@@ -1,18 +1,16 @@
 # How to compile and run code
 
-To compile the code, open a terminal, go to the `build` folder (make sure it's empty) and execute the
+To compile the code, open a terminal (make sure you're on the project's root) and execute the
 following:
 
-`cmake ..`
+`./compiled_and_run.sh`
 
-`cmake --build .`
+## Flags
 
-Once compiled, move up to the project's root and execute:
+You can pass the following flags when running `compile_and_run.sh`:
 
-`./build/CAR-practica2`
-
-It's important that you **move up** to the root folder before executing, because of
-relative paths when opening the dataset images.
+- `--simd` — use SIMD‑accelerated convolution
+- `--nosimd` — use the scalar (non‑SIMD) convolution
 
 # How to Get the Dataset
 
