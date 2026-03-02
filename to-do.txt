@@ -1,9 +1,11 @@
-- get parallelized version to run without segfaulting*
-- fix messy class code and make cleaner
+- add unifying third method*
+    - make sure it works in main*
 - add a timer to src/main.cpp or sth
+- fix messy class code and make cleaner
 - use TWO separate times (total program time, convolution time)
 - execute benchmarks on lab computers
 - md5sum
 -O0 and -O3
+- test against numpy
 
 correo profe: ruben.crespo@ua.es

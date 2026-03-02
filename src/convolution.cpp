@@ -1,5 +1,6 @@
 #include <CAR-practica2/convolution.hpp>
 #include <immintrin.h>
+#include <iostream>
 
 ConvolutionKernel::ConvolutionKernel(
     std::initializer_list<std::initializer_list<float>> init)
@@ -41,8 +42,26 @@ void do_scalar_pixel(int x, int y, const Image &img, Image &out, const Convoluti
     }
 }
 
-Image Convolver::apply(const Image &img, const ConvolutionKernel &kernel)
+Image Convolver::do_convolve(const Image &img,
+                             const ConvolutionKernel &kernel,
+                             bool use_simd)
 {
+    // If SIMD is requested, use the vectorized implementation.
+    // Otherwise, fall back to the scalar version.
+    if (use_simd)
+    {
+        return apply_simd(img, kernel);
+    }
+    else
+    {
+        return apply_linear(img, kernel);
+    }
+}
+
+Image Convolver::apply_linear(const Image &img, const ConvolutionKernel &kernel)
+{
+    std::cout << "Convolver:: You're using LINEAR convolutions";
+
     Image out(img.width, img.height, img.nChannels);
 
     for (int y = 1; y < img.height - 1; y++)
@@ -59,6 +78,8 @@ Image Convolver::apply(const Image &img, const ConvolutionKernel &kernel)
 
 Image Convolver::apply_simd(const Image &img, const ConvolutionKernel &kernel)
 {
+    std::cout << "Convolver:: You're using SIMD convolutions";
+
     std::size_t stride = img.width * img.nChannels;
     Image out = Image(img.width, img.height, img.nChannels);
 

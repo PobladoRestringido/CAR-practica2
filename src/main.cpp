@@ -42,8 +42,8 @@ int main()
         try
         {
             Image img = Image::load(path);
-            Convolver homunculus;
-            Image filtered = homunculus.apply_simd(img, edge_kernel);
+            Convolver convolver;
+            Image filtered = convolver.do_convolve(img, edge_kernel, 1);
 
             std::string filename = path.substr(path.find_last_of("/\\") + 1);
             filtered.save_jpg("output/" + filename);
