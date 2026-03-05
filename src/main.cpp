@@ -64,7 +64,8 @@ int main(int argc, char **argv)
     {
         try
         {
-            Image img = Image::load(path);
+            Image img;
+            img.load(path);
             Convolver convolver;
             ConvolutionResult res = convolver.do_convolve(img, edge_kernel, use_simd);
             elapsed_convolution_time += res.elapsed_seconds;

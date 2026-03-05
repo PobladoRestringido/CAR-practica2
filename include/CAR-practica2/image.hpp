@@ -10,7 +10,7 @@ public:
     int width = 0, height = 0, nChannels = 0;
     std::vector<unsigned char> data;
 
-    Image() = default;
+    Image() : width(0), height(0), nChannels(0), data() {};
     /**
      * @brief Constructs an empty image with the given dimensions.
      * @param width   Image width in pixels.

@@ -1,5 +1,4 @@
 - add a hash to make sure all picture outputs are equal
-    - push and pull*
     - currently simd version outputs red cats??!!*
 - make it take parameter to specify number of images
 - make running code independent of makefile

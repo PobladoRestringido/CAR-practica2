@@ -21,8 +21,7 @@ std::string sha256(const std::vector<unsigned char> &data)
 int main()
 {
     // Load your test image
-    Image img; // or however your Image class loads files
-    img.load("test.png");
+    Image img = Image::load("test.png");
 
     // Example 3×3 kernel
     ConvolutionKernel kernel({{0.f, -1.f, 0.f},
