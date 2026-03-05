@@ -1,5 +1,8 @@
-- make it take parameter to specify number of images*
 - add a hash to make sure all picture outputs are equal
+    - push and pull*
+    - currently simd version outputs red cats??!!*
+- make it take parameter to specify number of images
+- make running code independent of makefile
 - fix messy class code and make cleaner
 - use TWO separate times (total program time, convolution time)
 - execute benchmarks on lab computers
