@@ -1,6 +1,5 @@
-- add a hash to make sure all picture outputs are equal
-    - currently simd version outputs red cats??!!*
 - make it take parameter to specify number of images
+- make sure I fully understand simd convolution code and try and make it more efficient*
 - make running code independent of makefile
 - fix messy class code and make cleaner
 - use TWO separate times (total program time, convolution time)

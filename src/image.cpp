@@ -20,13 +20,13 @@ void Image::set(int x, int y, int channel, float value)
 
 Image Image::load(const std::string &path)
 {
-    Image img;
-    unsigned char *raw = stbi_load(path.c_str(), &img.width, &img.height, &img.nChannels, 0);
-
+    int w, h, c;
+    unsigned char *raw = stbi_load(path.c_str(), &w, &h, &c, 0);
     if (!raw)
         throw std::runtime_error("Failed to load: " + path);
 
-    img.data.assign(raw, raw + img.width * img.height * img.nChannels);
+    Image img(w, h, c);
+    img.data.assign(raw, raw + w * h * c);
     stbi_image_free(raw);
     return img;
 }
