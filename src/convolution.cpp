@@ -62,8 +62,6 @@ ConvolutionResult Convolver::do_convolve(const Image &img,
 
 Image Convolver::apply_linear(const Image &img, const ConvolutionKernel &kernel)
 {
-    std::cout << "Convolver:: You're using LINEAR convolutions";
-
     Image out(img.width, img.height, img.nChannels);
 
     for (int y = 1; y < img.height - 1; y++)

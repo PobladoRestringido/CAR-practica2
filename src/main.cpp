@@ -32,7 +32,11 @@ int main(int argc, char **argv)
 {
     using clock = std::chrono::high_resolution_clock;
     auto start = clock::now();
+
+    //>>>>>>>>>>>>>>>>>>>>
     int MAX_N_IMAGES = 50;
+    //>>>>>>>>>>>>>>>>>>>>
+
     double elapsed_convolution_time = 0;
 
     bool use_simd = true; // default

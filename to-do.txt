@@ -1,5 +1,5 @@
-- ADD COMPILER FLAGS
-- make it take parameter to specify number of images*
+- make test suite script remove files after done*
+- make it take parameter to specify number of images
 - make sure I fully understand simd convolution code and try and make it more efficient
 - make running code independent of makefile
 - fix messy class code and make cleaner
