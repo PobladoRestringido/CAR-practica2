@@ -10,7 +10,7 @@
 class ConvolutionKernel
 {
 public:
-    float k[3][3];
+    float data[3][3];
 
     /**
      * @brief Constructs a 3×3 kernel from nested initializer lists.

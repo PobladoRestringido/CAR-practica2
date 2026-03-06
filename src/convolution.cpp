@@ -12,7 +12,7 @@ ConvolutionKernel::ConvolutionKernel(
         int x = 0;
         for (auto &v : row)
         {
-            k[y][x++] = v;
+            data[y][x++] = v;
         }
         y++;
     }
@@ -28,7 +28,7 @@ void do_scalar_pixel(int x, int y, const Image &img, Image &out, const Convoluti
         {
             int px = x + kx;
             int py = y + ky;
-            float weight = kernel.k[ky + 1][kx + 1];
+            float weight = kernel.data[ky + 1][kx + 1];
 
             for (int c = 0; c < img.nChannels; c++)
             {
@@ -78,34 +78,64 @@ Image Convolver::apply_linear(const Image &img, const ConvolutionKernel &kernel)
     return out;
 }
 
+/**
+ * apply_simd(img, kernel)
+ *
+ * Applies a 3×3 convolution to an RGB image using SSE SIMD intrinsics.
+ * Processes 4 pixels at a time by packing their R/G/B values into __m128 vectors.
+ *
+ * Main steps:
+ * 1. Iterate over the image interior (skip borders).
+ * 2. For each row, process pixels in chunks of 4 using SIMD.
+ * 3. For each 3×3 kernel position:
+ *      - Load 4 R values into a vector (__m128)
+ *      - Load 4 G values into a vector
+ *      - Load 4 B values into a vector
+ *      - Multiply each vector by the kernel weight
+ *      - Accumulate into running sums
+ * 4. Convert the final float sums to integers.
+ * 5. Clamp to [0,255] and store back into the output image.
+ *
+ * Intrinsics used:
+ * - _mm_setzero_ps      : create a zero vector
+ * - _mm_set1_ps         : broadcast a scalar float to all 4 lanes
+ * - _mm_set_ps          : build a vector from 4 floats
+ * - _mm_mul_ps          : element-wise multiply
+ * - _mm_add_ps          : element-wise add
+ * - _mm_cvttps_epi32    : convert float→int (truncate)
+ * - _mm_store_si128     : store 4 ints to memory
+ */
 Image Convolver::apply_simd(const Image &img, const ConvolutionKernel &kernel)
 {
-    std::cout << "Convolver:: You're using SIMD convolutions";
+    const int nChannels = img.nChannels;
+    /*
+    Stride is simply the number of bytes you must skip to move from the start of one
+    image row to the start of the next. It’s used so the code can correctly jump through
+    the 1‑D memory buffer as if it were a 2‑D image.
+    */
+    const int stride = img.width * nChannels;
+    Image out = Image(img.width, img.height, nChannels);
 
-    const int C = img.nChannels; // = 3
-    const int stride = img.width * C;
-
-    Image out(img.width, img.height, C);
-
-    for (int y = 1; y < img.height - 1; y++)
+    // ITERATE OVER IMAGE'S PIXELS
+    for (int imageY = 1; imageY < img.height - 1; imageY++)
     {
-        int x = 1;
-
-        for (; x < img.width - 1 - 3; x += 4)
+        int imageX = 1;
+        for (; imageX < img.width - 1 - 3; imageX += 4)
         {
             __m128 sumR = _mm_setzero_ps();
             __m128 sumG = _mm_setzero_ps();
             __m128 sumB = _mm_setzero_ps();
 
-            for (int ky = -1; ky <= 1; ky++)
+            // ITERATE OVER KERNEL
+            for (int kernelY = -1; kernelY <= 1; kernelY++)
             {
-                for (int kx = -1; kx <= 1; kx++)
+                for (int kernelX = -1; kernelX <= 1; kernelX++)
                 {
-                    float w = kernel.k[ky + 1][kx + 1];
-                    __m128 weight = _mm_set1_ps(w);
+                    float currentKernelWeight = kernel.data[kernelY + 1][kernelX + 1];
+                    __m128 vectorizedWeight = _mm_set1_ps(currentKernelWeight);
 
                     const unsigned char *ptr =
-                        img.data.data() + ((y + ky) * stride + (x + kx) * C);
+                        img.data.data() + ((imageY + kernelY) * stride + (imageX + kernelX) * nChannels);
 
                     float r0 = ptr[0];
                     float g0 = ptr[1];
@@ -127,9 +157,9 @@ Image Convolver::apply_simd(const Image &img, const ConvolutionKernel &kernel)
                     __m128 G = _mm_set_ps(g3, g2, g1, g0);
                     __m128 B = _mm_set_ps(b3, b2, b1, b0);
 
-                    sumR = _mm_add_ps(sumR, _mm_mul_ps(R, weight));
-                    sumG = _mm_add_ps(sumG, _mm_mul_ps(G, weight));
-                    sumB = _mm_add_ps(sumB, _mm_mul_ps(B, weight));
+                    sumR = _mm_add_ps(sumR, _mm_mul_ps(R, vectorizedWeight));
+                    sumG = _mm_add_ps(sumG, _mm_mul_ps(G, vectorizedWeight));
+                    sumB = _mm_add_ps(sumB, _mm_mul_ps(B, vectorizedWeight));
                 }
             }
 
@@ -142,18 +172,19 @@ Image Convolver::apply_simd(const Image &img, const ConvolutionKernel &kernel)
             _mm_store_si128((__m128i *)g, g32);
             _mm_store_si128((__m128i *)b, b32);
 
-            uint8_t *dst = out.data.data() + (y * stride + x * C);
+            uint8_t *outputPtr = out.data.data() + (imageY * stride + imageX * nChannels);
 
             for (int i = 0; i < 4; i++)
             {
-                dst[i * 3 + 0] = std::clamp(r[i], 0, 255);
-                dst[i * 3 + 1] = std::clamp(g[i], 0, 255);
-                dst[i * 3 + 2] = std::clamp(b[i], 0, 255);
+                outputPtr[i * 3 + 0] = std::clamp(r[i], 0, 255);
+                outputPtr[i * 3 + 1] = std::clamp(g[i], 0, 255);
+                outputPtr[i * 3 + 2] = std::clamp(b[i], 0, 255);
             }
         }
 
-        for (; x < img.width - 1; x++)
-            do_scalar_pixel(x, y, img, out, kernel);
+        // TAIL LOOP
+        for (; imageX < img.width - 1; imageX++)
+            do_scalar_pixel(imageX, imageY, img, out, kernel);
     }
 
     return out;
