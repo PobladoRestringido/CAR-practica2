@@ -34,7 +34,7 @@ int main(int argc, char **argv)
     auto start = clock::now();
 
     //>>>>>>>>>>>>>>>>>>>>
-    int MAX_N_IMAGES = 50;
+    int MAX_N_IMAGES = 250;
     //>>>>>>>>>>>>>>>>>>>>
 
     double elapsed_convolution_time = 0;
@@ -76,7 +76,7 @@ int main(int argc, char **argv)
             std::string filename = path.substr(path.find_last_of("/\\") + 1);
             res.output.save_jpg("output/" + filename);
 
-            std::cout << "Processed: " << filename << "\n";
+            // std::cout << "Processed: " << filename << "\n";
         }
         catch (const std::exception &e)
         {
