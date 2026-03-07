@@ -1,19 +1,3 @@
-# How to compile and run code
-
-First go into `build` and run `cmake ..`.
-
-To compile the code, open a terminal (make sure you're on the project's root) and execute the
-following:
-
-`./compile_and_run.sh`
-
-## Flags
-
-You can pass the following flags when running `compile_and_run.sh`:
-
-- `--simd` — use SIMD‑accelerated convolution
-- `--nosimd` — use the scalar (non‑SIMD) convolution
-
 # How to Get the Dataset
 
 1. Visit the Kaggle dataset page:  
@@ -32,3 +16,19 @@ CAR-practica2
 ├── LostCat-PS
 └── LostCat-PSC
 ```
+
+# How to compile and run code
+
+First get the dataset from Kaggle (see instructions above).
+
+Afterward, simply open a terminal window and execute the following (**make sure you're at the
+project's root!**):
+
+`./run_full_suite.sh`
+
+## Flags (unnecessary; simply follow instructions above)
+
+You can pass the following flags when running `compile_and_run.sh`:
+
+- `--simd` — use SIMD‑accelerated convolution
+- `--nosimd` — use the scalar (non‑SIMD) convolution
