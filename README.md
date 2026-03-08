@@ -11,10 +11,10 @@ After extraction, your project structure should look like this:
 
 ```
 CAR-practica2
-├── build
 ├── include
 ├── LostCat-PS
-└── LostCat-PSC
+├── LostCat-PSC
+└── ...
 ```
 
 # How to compile and run code
